@@ -1,0 +1,119 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+
+/* HEADER */
+
+header{
+background:#0aa6a6;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+
+/* MAIN */
+
+main{
+padding:30px;
+}
+
+
+/* BUSCA */
+
+.busca{
+margin-bottom:40px;
+}
+
+form input{
+padding:8px;
+margin-right:10px;
+}
+
+form button{
+padding:8px 12px;
+background:#0aa6a6;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+
+/* DESTINOS */
+
+#destinos{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card{
+width:250px;
+border:1px solid #ccc;
+border-radius:10px;
+padding:10px;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+
+/* PROMOÇÃO */
+
+.promocao{
+background:#f5f5f5;
+}
+
+
+/* FOOTER */
+
+footer{
+margin-top:40px;
+background:#0aa6a6;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav ul{
+flex-direction:column;
+align-items:center;
+}
+
+#destinos{
+flex-direction:column;
+align-items:center;
+}
+
+}
