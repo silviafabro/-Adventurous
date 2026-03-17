@@ -9,7 +9,7 @@ Guia de viagens inspiracional  destinos de praia, montanha, cidade e deserto.
 
 | # | Funcionalidade | Tecnologia |
 |---|----------------|------------|
-| 1 | Menu responsivo com hamburguer (mobile) | JS + CSS |
+| 1 | Menu responsivo com hamburguer. (mobile) | JS + CSS |
 | 2 | Link ativo no menu via scroll (IntersectionObserver) | JS |
 | 3 | Animação de entrada dos cards ao rolar a página | JS (IntersectionObserver) |
 | 4 | Sistema de busca de destinos | JS |
