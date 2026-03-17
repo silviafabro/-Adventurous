@@ -1,14 +1,245 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Adventurous ✈️</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Adventures – Explore o mundo com a gente. Destinos incríveis, dicas de viagem e muito mais." />
+  <title>Adventures – Explore o Mundo</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
 
-<h1>Adventurous ✈️</h1>
-<p>Site de viagens! //Melhorar descrição
-</p>
+  <!-- ========== HEADER ========== -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <div class="logo">
+        <h1>Adventures</h1>
+        <span class="logo-tagline">since 2024</span>
+      </div>
 
+      <!-- Botão hamburguer para mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="menu" id="mainMenu" role="navigation" aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio" class="active">Início</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#dicas">Dicas</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== BANNER / HERO ========== -->
+    <section class="banner" id="inicio" aria-label="Seção principal">
+      <div class="banner-overlay"></div>
+      <div class="banner-content">
+        <p class="banner-eyebrow">✦ Descubra novos horizontes</p>
+        <h2>Explore o mundo<br /><em>com a gente</em></h2>
+        <p class="banner-sub">De praias paradisíacas a montanhas imponentes — encontre seu próximo destino.</p>
+        <a href="#destinos" class="btn-primary">Ver destinos</a>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ========== DESTINOS (CARDS) ========== -->
+    <section class="section" id="destinos" aria-labelledby="destinos-title">
+      <div class="section-header">
+        <p class="section-eyebrow">Explore</p>
+        <h2 id="destinos-title">Destinos em destaque</h2>
+        <p class="section-sub">Lugares selecionados para inspirar a sua próxima aventura.</p>
+      </div>
+
+      <div class="cards">
+
+        <!-- Card 1 -->
+        <article class="card" tabindex="0" aria-label="Destino: Praias Incríveis">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80"
+              alt="Praia paradisíaca com águas cristalinas e areia branca"
+              loading="lazy"
+            />
+            <span class="card-badge">🏖️ Praia</span>
+          </div>
+          <div class="card-content">
+            <h3>Praias Incríveis</h3>
+            <p>Descubra os melhores destinos paradisíacos para relaxar e recarregar as energias.</p>
+            <a href="#" class="card-link" aria-label="Saiba mais sobre Praias Incríveis">Saiba mais →</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" tabindex="0" aria-label="Destino: Aventuras na Montanha">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80"
+              alt="Mochileiro admirando paisagem de montanhas ao amanhecer"
+              loading="lazy"
+            />
+            <span class="card-badge">⛰️ Montanha</span>
+          </div>
+          <div class="card-content">
+            <h3>Aventuras na Montanha</h3>
+            <p>Para quem ama trilhas, natureza selvagem e aquela dose de adrenalina.</p>
+            <a href="#" class="card-link" aria-label="Saiba mais sobre Aventuras na Montanha">Saiba mais →</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" tabindex="0" aria-label="Destino: Explorando Cidades">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80"
+              alt="Rua movimentada de uma grande cidade ao entardecer"
+              loading="lazy"
+            />
+            <span class="card-badge">🏙️ Cidade</span>
+          </div>
+          <div class="card-content">
+            <h3>Explorando Cidades</h3>
+            <p>Guia completo para conhecer as maiores e mais vibrantes cidades do mundo.</p>
+            <a href="#" class="card-link" aria-label="Saiba mais sobre Explorando Cidades">Saiba mais →</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card" tabindex="0" aria-label="Destino: Desertos e Savanas">
+          <div class="card-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80"
+              alt="Dunas de areia em deserto ao pôr do sol"
+              loading="lazy"
+            />
+            <span class="card-badge">🌵 Deserto</span>
+          </div>
+          <div class="card-content">
+            <h3>Desertos e Savanas</h3>
+            <p>Paisagens surreais e silêncio absoluto — para quem busca o incomum.</p>
+            <a href="#" class="card-link" aria-label="Saiba mais sobre Desertos e Savanas">Saiba mais →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== DICAS ========== -->
+    <section class="section section-alt" id="dicas" aria-labelledby="dicas-title">
+      <div class="section-header">
+        <p class="section-eyebrow">Viaje melhor</p>
+        <h2 id="dicas-title">Dicas de viagem</h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-item">
+          <span class="tip-icon" aria-hidden="true">🎒</span>
+          <h4>Monte sua mochila certo</h4>
+          <p>Leve apenas o essencial e use organizadores de mala para ganhar espaço.</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon" aria-hidden="true">💳</span>
+          <h4>Controle seu orçamento</h4>
+          <p>Separe um fundo de emergência e pesquise a cotação local antes de viajar.</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon" aria-hidden="true">📱</span>
+          <h4>Apps indispensáveis</h4>
+          <p>Google Maps offline, Duolingo e apps de câmbio são seus melhores amigos.</p>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon" aria-hidden="true">🌍</span>
+          <h4>Respeite a cultura local</h4>
+          <p>Pesquise costumes e tradições do destino antes de embarcar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BUSCA ========== -->
+    <section class="section" id="busca" aria-labelledby="busca-title">
+      <div class="section-header">
+        <p class="section-eyebrow">Encontre</p>
+        <h2 id="busca-title">Buscar destino</h2>
+      </div>
+      <div class="search-wrap">
+        <label for="searchInput" class="sr-only">Digite um destino</label>
+        <input
+          type="search"
+          id="searchInput"
+          class="search-input"
+          placeholder="Ex: Praia, Montanha, Paris…"
+          aria-label="Buscar destino"
+          autocomplete="off"
+        />
+        <button class="btn-search" id="searchBtn" aria-label="Buscar">🔍 Buscar</button>
+      </div>
+      <p class="search-result" id="searchResult" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="section section-alt" id="contato" aria-labelledby="contato-title">
+      <div class="section-header">
+        <p class="section-eyebrow">Fale conosco</p>
+        <h2 id="contato-title">Contato</h2>
+        <p class="section-sub">Tem dúvidas ou quer sugerir um destino? Escreva para a gente!</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate aria-label="Formulário de contato">
+        <div class="form-group">
+          <label for="name">Nome <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Seu nome completo" required autocomplete="name" />
+          <span class="field-error" id="nameError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required autocomplete="email" />
+          <span class="field-error" id="emailError" role="alert"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="destino">Destino de interesse</label>
+          <select id="destino" name="destino" aria-label="Selecione o destino">
+            <option value="">Selecione…</option>
+            <option value="praia">Praias</option>
+            <option value="montanha">Montanhas</option>
+            <option value="cidade">Cidades</option>
+            <option value="deserto">Desertos</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem…" required></textarea>
+          <span class="field-error" id="messageError" role="alert"></span>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full">Enviar mensagem</button>
+        <p class="form-success" id="formSuccess" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <p>© 2026 <strong>Adventures</strong> – Todos os direitos reservados.</p>
+    <p class="footer-sub">Feito com ❤️ para quem ama viajar</p>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo da página" title="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
