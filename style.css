@@ -175,6 +175,8 @@ a {
   overflow: hidden;
 }
 
+
+
 .banner-overlay {
   position: absolute;
   inset: 0;
@@ -422,6 +424,7 @@ a {
 }
 
 .tip-item {
+  cursor:pointer;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
