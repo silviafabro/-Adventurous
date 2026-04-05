@@ -15,23 +15,26 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" role="banner">
   <div class="header-inner">
-
     <div class="logo">
       <h1>Adventures</h1>
-      <span class="logo-tagline">Explore o mundo</span>
+      <span class="logo-tagline">since 2024</span>
     </div>
 
-    <nav class="menu">
+    <!-- Botão hamburguer para mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="mainMenu" role="navigation" aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="#" class="active">Praias</a></li>
         <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="index.html#dicas">Dicas</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
@@ -48,15 +51,95 @@
   </div>
 </section>
 
-<!-- SEÇÃO VAZIA -->
+<!-- SEÇÃO DE DESTINOS -->
 <section class="section">
 
   <div class="section-header">
-    <span class="section-eyebrow">Em breve</span>
-    <h2>Destinos paradisíacos</h2>
+    <span class="section-eyebrow">Paraísos aquáticos</span>
+    <h2>Melhores praias para você</h2>
     <p class="section-sub">
-      Conteúdo será adicionado aqui em breve.
+      Descubra destinos paradisíacos para relaxar, explorar e criar memórias inesquecíveis.
     </p>
+  </div>
+
+  <div class="cards">
+    <!-- Praia 1 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏝️ Copacabana</span>
+      </div>
+      <div class="card-content">
+        <h3>Copacabana</h3>
+        <p>Praia lendária do Rio de Janeiro, famosa pelos seus areais e vida noturna vibrante.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Praia 2 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🌊 Ipanema</span>
+      </div>
+      <div class="card-content">
+        <h3>Ipanema</h3>
+        <p>Praia sofisticada e natural, perfeita para observar o pôr do sol entre amigos.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Praia 3 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏖️ Bonito</span>
+      </div>
+      <div class="card-content">
+        <h3>Bonito</h3>
+        <p>Águas cristalinas e explorações subaquáticas incríveis em Bonito, Mato Grosso do Sul.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Praia 4 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🌴 Maragogi</span>
+      </div>
+      <div class="card-content">
+        <h3>Maragogi</h3>
+        <p>Vila de praia tranquila com piscinas naturais de água quente em Alagoas.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Praia 5 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏄 Jericoacoara</span>
+      </div>
+      <div class="card-content">
+        <h3>Jericoacoara</h3>
+        <p>Paraíso para surfistas, com dunas coloridas e lagoas de água doce.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Praia 6 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🐚 Fernando de Noronha</span>
+      </div>
+      <div class="card-content">
+        <h3>Fernando de Noronha</h3>
+        <p>Arquipélago preservado ideal para mergulho e avistamento de golfinhos.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
   </div>
 
 </section>
@@ -67,5 +150,6 @@
   <p class="footer-sub">Descubra. Explore. Viva.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

@@ -15,23 +15,26 @@
 <body>
 
 <!-- HEADER (igual) -->
-<header class="header">
+<header class="header" role="banner">
   <div class="header-inner">
-
     <div class="logo">
       <h1>Adventures</h1>
-      <span class="logo-tagline">Explore o mundo</span>
+      <span class="logo-tagline">since 2024</span>
     </div>
 
-    <nav class="menu">
+    <!-- Botão hamburguer para mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="mainMenu" role="navigation" aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="#" class="active">Montanhas</a></li>
         <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="index.html#dicas">Dicas</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
@@ -62,37 +65,82 @@
   <div class="cards">
 
     <!-- CARD 1 -->
-    <div class="card" tabindex="0">
-      <div class="card-content">
-        <h3>Monte Everest</h3>
-        <p>
-          O ponto mais alto do mundo, localizado no Himalaia, é o sonho de aventureiros e montanhistas.
-        </p>
-        <span class="card-link">Explorar →</span>
+    <article class="card" tabindex="0" aria-label="Destino: Petrópolis">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">⛏️ Petrópolis</span>
       </div>
-    </div>
+      <div class="card-content">
+        <h3>Petrópolis</h3>
+        <p>Serra imperial com trilhas e clima fresco, próximo ao Rio de Janeiro.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
 
     <!-- CARD 2 -->
-    <div class="card" tabindex="0">
-      <div class="card-content">
-        <h3>Montanhas Rochosas</h3>
-        <p>
-          Uma cadeia montanhosa impressionante na América do Norte, com trilhas e paisagens incríveis.
-        </p>
-        <span class="card-link">Explorar →</span>
+    <article class="card" tabindex="0" aria-label="Destino: Chapada Diamantina">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🥾 Chapada</span>
       </div>
-    </div>
+      <div class="card-content">
+        <h3>Chapada Diamantina</h3>
+        <p>Cenários selvagens, poços naturais e trilhas desafiadoras na Bahia.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
 
     <!-- CARD 3 -->
-    <div class="card" tabindex="0">
+    <article class="card" tabindex="0" aria-label="Destino: Alpes Suíços">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🗻 Alpes</span>
+      </div>
       <div class="card-content">
         <h3>Alpes Suíços</h3>
-        <p>
-          Cenários de tirar o fôlego, com neve, vilarejos charmosos e uma das regiões mais bonitas da Europa.
-        </p>
-        <span class="card-link">Explorar →</span>
+        <p>Montanhas imponentes com trilhas selvagens e vilas encantadoras na Suíça.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
       </div>
-    </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card" tabindex="0" aria-label="Destino: Serra Gaúcha">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏔️ Serra</span>
+      </div>
+      <div class="card-content">
+        <h3>Serra Gaúcha</h3>
+        <p>Vinhedos e trilhas suaves entre paisagens montanhosas do Sul do Brasil.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card" tabindex="0" aria-label="Destino: Machu Picchu">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">❄️ Machu</span>
+      </div>
+      <div class="card-content">
+        <h3>Machu Picchu</h3>
+        <p>Ruínas incas em altitude extrema com vistas de tirar o fôlego no Peru.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="card" tabindex="0" aria-label="Destino: Patagônia">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🌄 Patagônia</span>
+      </div>
+      <div class="card-content">
+        <h3>Patagônia</h3>
+        <p>Picos rochosos e glaciares na região mais selvagem da América do Sul.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
 
   </div>
 
@@ -104,5 +152,6 @@
   <p class="footer-sub">Descubra. Explore. Viva.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

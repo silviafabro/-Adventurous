@@ -15,23 +15,26 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" role="banner">
   <div class="header-inner">
-
     <div class="logo">
       <h1>Adventures</h1>
-      <span class="logo-tagline">Explore o mundo</span>
+      <span class="logo-tagline">since 2024</span>
     </div>
 
-    <nav class="menu">
+    <!-- Botão hamburguer para mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="mainMenu" role="navigation" aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="#" class="active">Cidades</a></li>
         <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="index.html#dicas">Dicas</a></li>
         <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
-
   </div>
 </header>
 
@@ -48,15 +51,95 @@
   </div>
 </section>
 
-<!-- SEÇÃO VAZIA (PRONTA PRA USO) -->
+<!-- SEÇÃO DE DESTINOS -->
 <section class="section">
 
   <div class="section-header">
-    <span class="section-eyebrow">Em breve</span>
-    <h2>Destinos urbanos</h2>
+    <span class="section-eyebrow">Vida urbana</span>
+    <h2>Cidades para explorar</h2>
     <p class="section-sub">
-      Conteúdo será adicionado aqui em breve.
+      Descubra as maiores e mais vibrantes cidades do mundo com cultura e história.
     </p>
+  </div>
+
+  <div class="cards">
+    <!-- Cidade 1 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🗼 Paris</span>
+      </div>
+      <div class="card-content">
+        <h3>Paris</h3>
+        <p>A cidade da luz com museus mundiais, cafés charmosos e a icônica Torre Eiffel.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Cidade 2 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🗽 Nova York</span>
+      </div>
+      <div class="card-content">
+        <h3>Nova York</h3>
+        <p>Metrópole dos superlativocos com vida noturna intensa e experiências incríveis.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Cidade 3 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏯 Tóquio</span>
+      </div>
+      <div class="card-content">
+        <h3>Tóquio</h3>
+        <p>Fusão de tradição e tecnologia com experiências gastronômicas e culturais incríveis.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Cidade 4 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">⛪ Barcelona</span>
+      </div>
+      <div class="card-content">
+        <h3>Barcelona</h3>
+        <p>Arquitetura de Gaudí, praias no centro da cidade e vida noturna vibrante.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Cidade 5 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏛️ Roma</span>
+      </div>
+      <div class="card-content">
+        <h3>Roma</h3>
+        <p>A cidade eterna com ruínas históricas, arte renascentista e gastronomia de classe mundial.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Cidade 6 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🌃 Dubai</span>
+      </div>
+      <div class="card-content">
+        <h3>Dubai</h3>
+        <p>Luxo, arquitetura futurista e deserto de ouro próximo aos arranha-céus modernos.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
   </div>
 
 </section>
@@ -67,5 +150,6 @@
   <p class="footer-sub">Descubra. Explore. Viva.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

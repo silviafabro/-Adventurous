@@ -367,7 +367,24 @@ a {
   transition: transform 0.5s ease;
 }
 
-.card:hover .card-img-wrap img {
+.card-img-placeholder {
+  width: 100%;
+  height: 210px;
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--surface) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.card:hover .card-img-wrap img,
+.card:hover .card-img-placeholder {
   transform: scale(1.07);
 }
 
@@ -672,7 +689,200 @@ a {
   transform: translateY(0);
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
+/* ---------- SUB-CARDS (DESTINOS DENTRO DE CATEGORIAS) ---------- */
+.subcards-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.subcards-container.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.subcards-container.hidden {
+  display: none;
+}
+
+.subcards-content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subcards-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: #080c12;
+  border: none;
+  border-radius: 50%;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 301;
+}
+
+.subcards-close:hover {
+  background: #d9b87a;
+  transform: scale(1.1);
+}
+
+.subcards-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.subcards-header h3 {
+  font-family: var(--font-head);
+  font-size: 32px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.subcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.subcard {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.subcard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 32px rgba(201, 168, 108, 0.2);
+}
+
+.subcard-img-placeholder {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(135deg, var(--bg-alt) 0%, var(--surface) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.subcard-emoji {
+  display: block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.subcard-content {
+  padding: 16px;
+}
+
+.subcard-content h4 {
+  font-family: var(--font-head);
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.subcard-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ---------- RESPONSIVIDADE PARA SUB-CARDS ---------- */
+@media (max-width: 640px) {
+  .subcards-content {
+    padding: 30px 20px;
+  }
+
+  .subcards-close {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .subcards-header h3 {
+    font-size: 24px;
+  }
+
+  .subcards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subcard-img-placeholder {
+    height: 120px;
+    font-size: 3rem;
+  }
+}
+
+/* ---------- ANIMAÇÕES DE ENTRADA PARA SUB-CARDS ---------- */
+.subcard {
+  animation: fadeInSubcard 0.5s ease both;
+}
+
+.subcard:nth-child(1) { animation-delay: 0.05s; }
+.subcard:nth-child(2) { animation-delay: 0.1s; }
+.subcard:nth-child(3) { animation-delay: 0.15s; }
+.subcard:nth-child(4) { animation-delay: 0.2s; }
+.subcard:nth-child(5) { animation-delay: 0.25s; }
+.subcard:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes fadeInSubcard {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 /* Tablet */
 @media (max-width: 900px) {

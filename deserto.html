@@ -17,17 +17,24 @@
 <body>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" role="banner">
   <div class="header-inner">
     <div class="logo">
       <h1>Adventures</h1>
-      <span class="logo-tagline">Explore o mundo</span>
+      <span class="logo-tagline">since 2024</span>
     </div>
 
-    <nav class="menu">
+    <!-- Botão hamburguer para mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainMenu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="menu" id="mainMenu" role="navigation" aria-label="Menu principal">
       <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="#" class="active">Desertos</a></li>
+        <li><a href="index.html#destinos">Destinos</a></li>
+        <li><a href="index.html#dicas">Dicas</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -55,42 +62,81 @@
 
   <div class="cards">
 
-    <!-- Saara -->
-    <article class="card">
+    <!-- Deserto 1 -->
+    <article class="card" tabindex="0">
       <div class="card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80" alt="Deserto do Saara">
-        <span class="card-badge">África</span>
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🏜️ Sahara</span>
       </div>
       <div class="card-content">
-        <h3>Deserto do Saara</h3>
-        <p>O maior deserto quente do mundo, com dunas gigantes e paisagens surreais.</p>
-        <a href="#" class="card-link">Explorar destino</a>
+        <h3>Sahara</h3>
+        <p>O maior deserto quente do mundo com dunas coloridas e culturas beduínas.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
       </div>
     </article>
 
-    <!-- Atacama -->
-    <article class="card">
+    <!-- Deserto 2 -->
+    <article class="card" tabindex="0">
       <div class="card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1549880181-56a44cf4a9a5?w=800&q=80" alt="Deserto do Atacama">
-        <span class="card-badge">Chile</span>
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🐫 Marraquexe</span>
       </div>
       <div class="card-content">
-        <h3>Deserto do Atacama</h3>
-        <p>O deserto mais seco do mundo, famoso por suas paisagens lunares.</p>
-        <a href="#" class="card-link">Explorar destino</a>
+        <h3>Marraquexe</h3>
+        <p>Oásis no coração do deserto com medinas exóticas e praças animadas.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
       </div>
     </article>
 
-    <!-- Namibe -->
-    <article class="card">
+    <!-- Deserto 3 -->
+    <article class="card" tabindex="0">
       <div class="card-img-wrap">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&q=80" alt="Deserto da Namíbia">
-        <span class="card-badge">Namíbia</span>
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🌅 Vale da Morte</span>
       </div>
       <div class="card-content">
-        <h3>Deserto da Namíbia</h3>
-        <p>Um dos desertos mais antigos do mundo, com dunas vermelhas icônicas.</p>
-        <a href="#" class="card-link">Explorar destino</a>
+        <h3>Vale da Morte</h3>
+        <p>Paisagem árida dos EUA com temperaturas extremas e beleza surreal.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Deserto 4 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🪨 Mojave</span>
+      </div>
+      <div class="card-content">
+        <h3>Mojave</h3>
+        <p>Deserto californiano com Joshua Trees e céu estrelado pristino.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Deserto 5 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">🦁 Serengeti</span>
+      </div>
+      <div class="card-content">
+        <h3>Serengeti</h3>
+        <p>Savana africana com grande migração de animais selvagens.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
+      </div>
+    </article>
+
+    <!-- Deserto 6 -->
+    <article class="card" tabindex="0">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder"></div>
+        <span class="card-badge">⭐ Atacama</span>
+      </div>
+      <div class="card-content">
+        <h3>Atacama</h3>
+        <p>Deserto chileno com céu mais limpo do mundo e paisagens selenares.</p>
+        <a href="#" class="card-link">Saiba mais →</a>
       </div>
     </article>
 
@@ -102,6 +148,5 @@
   <p>© 2026 <strong>Adventures</strong> — Todos os direitos reservados</p>
   <p class="footer-sub">Explore. Descubra. Viva.</p>
 </footer>
-
-</body>
+<script src="script.js"></script></body>
 </html>
